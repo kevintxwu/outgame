@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <title> Outgame </title>
+  <style>
+  body, html {
+    height: 100%;
+    min-height: 100%;
+  }
+  body, p {
+    font-family: 'Source Sans Pro', 'sans-serif';
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+  }
+  video#bgvid {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url("NEED SOMETHING HERE");
+    background-size: cover;
+  }
+  #banner {
+    float: left;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #banner-logo {
+    display: block;
+    margin: auto;
+    height: 75%;
+  }
+  p {
+    font-size: 16px;
+  }
+  #banner-blurb {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-top: -60px;
+  }
+  #scroll{
+    position: absolute;
+    bottom: 76px;
+    left: 45%;
+    width: 10%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  #scroll:hover {
+    cursor: pointer;
+    color: #FF7711;
+  }
+  #scroll-to {
+    float: left;
+    background: #FFFFFF;
+    width: 100%;
+  }
+  .content {
+    text-align: center;
+    margin: auto;
+    width: 600px;
+  }
+  .lift {
+    float: left;
+    display: block;
+    font-size: 72px;
+    font-weight: 700;
+    padding: 50px;
+  }
+  .img {
+    float: left;
+    display: block;
+    padding-top: 50px;
+    height: 100px;
+  }
+  .equation {
+    margin: auto;
+    padding-top: 50px;
+    width: 530px;
+  }
+  #blurb-title {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  .container {
+    float: left;
+    background: #FFFFFF;
+    width: 100%;
+  }
+  #blurb {
+    padding-top: 25px;
+    padding-bottom: 100px;
+    font-size: 24px;
+  }
+  #black {
+    background: #000000;
+  }
+  #flag {
+    padding-top: 100px;
+    height: 50px;
+  }
+  .white {
+    padding-top: 25px;
+    padding-bottom: 100px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    line-height: 2em;
+  }
+  </style>
+</head>
+<body>
+  <video autoplay loop poster="NEED SOMETHING HERE" id="bgvid" volume="0">
+  <source src="background.webm" type="video/webm">
+  <source src="background.mp4" type="video/mp4">
+  </video>
+  <div id="banner">
+    <img id="banner-logo" src="outgame.svg"/>
+    <p id="banner-blurb"> Event management for the events you love <br/> Save time, earn customers, keep stats </p>
+    <div id="scroll" onclick="$('html, body').animate({scrollTop: $('#scroll-to').offset().top}, 1000);"> 
+      <p> Learn More <br/>
+      &darr; </p>
+    </div>
+  </div>
+  <div id="scroll-to">
+    <div class="content">
+      <div class="equation">
+        <img class="img" src="phone.svg"/>
+        <span class="lift"> + </span>
+        <img class="img" src="monitor.svg"/>
+        <span class="lift"> = </span>
+        <img class="img" src="happy.svg"/>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <p id="blurb-title"> OUR GOAL </p>
+      <p id="blurb"> Here at Outgame we aim to incorporate organized statistics, streamlined event management, player profiles and much more to both tabletop and video games. In building our mobile and web applications, we are seeking game store owners to become our alpha testers. By offering them better and better ways to make their lives and events easy and efficient, we hope to create the ultimate hub to connect gamers and their competition. </p>
+    </div>
+  </div>
+  <div class="container" id="black">
+    <div class="content">
+      <img id="flag" src="flag.svg"/>
+      <p class="white"> &#169; 2014 Outgame <br/>
+      Monitor icon by James Fenton <br/>
+      Iphone icon by Edward Boatman <br/>
+      Video by Gathering Magic </p>
+    </div>
+  </div>
+</body>
+<script>
+$(document).ready(function() {
+  document.getElementById("bgvid").volume=0.0;
+});
+</script>
+</html>
